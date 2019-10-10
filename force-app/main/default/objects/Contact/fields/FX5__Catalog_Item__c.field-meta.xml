@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FX5__Catalog_Item__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>This links the person to a specific catalog item so that this person can be added to a field ticket and the app will automatically lookup the person&#39;s catalog item in the ticket&#39;s job&#39;s price book in order to automatically select the correct price book item to add to the ticket.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Labor catalog item for the user&#39;s job title.</inlineHelpText>
+    <label>Job Title from Catalog</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>FX5__Catalog_Item__c.FX5__Ticket_Item_Record_Type__c</field>
+            <operation>contains</operation>
+            <value>Labor</value>
+        </filterItems>
+        <filterItems>
+            <field>FX5__Catalog_Item__c.FX5__IsArchived__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>FX5__Catalog_Item__c</referenceTo>
+    <relationshipLabel>Contacts</relationshipLabel>
+    <relationshipName>Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

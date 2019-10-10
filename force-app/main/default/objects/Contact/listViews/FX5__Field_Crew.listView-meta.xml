@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FX5__Field_Crew</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>FX5__Office__c</columns>
+    <columns>FX5__Catalog_Item__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FX5__Available_for_Field_Work__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Field Crew</label>
+    <language>en_US</language>
+</ListView>
